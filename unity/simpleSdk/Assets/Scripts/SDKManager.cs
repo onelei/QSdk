@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Runtime.InteropServices;
+
 
 public class SDKManager : MonoBehaviour {
 	[SerializeField] private UILabel m_testAdd,m_testMult,m_testSend;
@@ -16,26 +18,55 @@ public class SDKManager : MonoBehaviour {
 	}
 
 	void testAdd(){
+		var result = 0;
+		#if UNITY_IPHONE
+		result = _Add(1,2);
+		#elif UNITY_ANDROID
 		AndroidJavaClass ja = new AndroidJavaClass("com.unity3d.player.UnityPlayer");  
 		AndroidJavaObject jo = ja.GetStatic<AndroidJavaObject>("currentActivity");  
-		var result = jo.CallStatic<int>("add",1,2);  
+		result = jo.CallStatic<int>("add",1,2);  
+		#endif
 		m_testAdd.text = result.ToString();  
+
 	}
 
 	void testMult(){
+		var result = 0;
+		#if UNITY_IPHONE
+		result = _Multiply(3,4);
+		#elif UNITY_ANDROID
 		AndroidJavaClass ja = new AndroidJavaClass("com.unity3d.player.UnityPlayer");  
 		AndroidJavaObject jo = ja.GetStatic<AndroidJavaObject>("currentActivity");  
-		var result = jo.Call<int>("Multiply",3,4);  
+		result = jo.Call<int>("Multiply",3,4);  
+		#endif
 		m_testMult.text = result.ToString();  
 	}
 
 	void testSend(){
+		#if UNITY_IPHONE
+		_sendToUnity();
+		#elif UNITY_ANDROID
 		AndroidJavaClass ja = new AndroidJavaClass("com.unity3d.player.UnityPlayer");  
 		AndroidJavaObject jo = ja.GetStatic<AndroidJavaObject>("currentActivity");  
 		jo.CallStatic("sendToUnity");  
+		#endif
+	
 	}
 
 	void androidMessgae(string msg){
 		m_testSend.text = msg;
 	}
+
+	void iosCallBack(string msg){
+		m_testSend.text = msg;
+	}
+
+	#if UNITY_IPHONE
+	[DllImport("__Internal")]
+	private static extern int _Add (int x,int y);
+	[DllImport("__Internal")]
+	private static extern int _Multiply (int x, int y);
+	[DllImport("__Internal")]
+	private static extern void _sendToUnity ();
+	#endif
 }
