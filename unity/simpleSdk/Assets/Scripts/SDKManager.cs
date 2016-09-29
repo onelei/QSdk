@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Runtime.InteropServices;
 
-
 public class SDKManager : MonoBehaviour {
 	[SerializeField] private UILabel m_testAdd,m_testMult,m_testSend;
 	// Use this for initialization
@@ -10,11 +9,6 @@ public class SDKManager : MonoBehaviour {
 		testAdd ();
 		testMult ();
 		testSend ();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
 	}
 
 	void testAdd(){
@@ -62,11 +56,8 @@ public class SDKManager : MonoBehaviour {
 	}
 
 	#if UNITY_IPHONE
-	[DllImport("__Internal")]
-	private static extern int _Add (int x,int y);
-	[DllImport("__Internal")]
-	private static extern int _Multiply (int x, int y);
-	[DllImport("__Internal")]
-	private static extern void _sendToUnity ();
+	[DllImport("__Internal")]private static extern int _Add (int x,int y);
+	[DllImport("__Internal")]private static extern int _Multiply (int x, int y);
+	[DllImport("__Internal")]private static extern void _sendToUnity ();
 	#endif
 }
