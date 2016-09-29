@@ -9,7 +9,8 @@ Unity version : 5.4.0p4
 
 ## Directory
 
-**android**, the plugin of unity for Android, a android jar project using Android Studio.		
+**android**, the plugin of unity for Android, a android jar project using Android Studio.
+
 **ios**, the plugin of unity for IOS.
 
 **unity**, the simple unity project for how to using the android and ios sdk.
