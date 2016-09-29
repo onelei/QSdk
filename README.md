@@ -1,9 +1,5 @@
 # simpleSdk
 
-![ios icon](./image/ios.PNG)
-
-## Overview
-
 **simpleSdk**, the simple sdk guide for *unity developers*.
 
 ## Directory
