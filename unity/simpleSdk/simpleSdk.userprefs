@@ -2,7 +2,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SDKManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/SDKManager.cs" Line="23" Column="12" />
+      <File FileName="Assets/Scripts/SDKManager.cs" Line="61" Column="27" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
