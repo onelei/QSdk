@@ -7,16 +7,12 @@
 Unity version : Unity 2017.4.30f1 (64-bit)
 
 
-## Directory
+## 文档
 
-**android**, the plugin of ![unity for Android](./QSdkAndroid/README.md), a android jar project using Android Studio.   
-
-**ios**, the plugin of ![unity for IOS](./QSdkIOS/README.md).
-
-**unity**, the simple unity project for how to using the android and ios sdk.
-
-**image**, the picture for QSdk.
- 
+* [android](./QSdkAndroid/README.md) ： a android jar project using eclipse.
+* [ios](./QSdkIOS/README.md) ： ios project using xcode.
+* [unity] ： the simple unity project for how to using the android and ios sdk.
+  
 ## How to use
 
 Here are the simple sdk unity project.
