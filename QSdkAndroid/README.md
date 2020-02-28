@@ -3,7 +3,7 @@ Using android studio creating android plugin for Unity.
 
 ## SoftWare
 
-Unity version : 5.4.0p4
+Unity version : Unity 2017.4.30f1 (64-bit)
 
 
 ## Steps

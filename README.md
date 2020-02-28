@@ -4,7 +4,7 @@
 
 ## SoftWare
 
-Unity version : 5.4.0p4
+Unity version : Unity 2017.4.30f1 (64-bit)
 
 
 ## Directory
@@ -32,8 +32,8 @@ Here are the simple sdk unity project.
 
 Andriod :
 
-![android icon](./Image/android.jpg)
+![android icon](./Image/android.png)
 
 IOS :
 
-![ios icon](./Image/ios.PNG)
+![ios icon](./Image/ios.png)
