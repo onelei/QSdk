@@ -39,25 +39,13 @@ public class MainActivity extends UnityPlayerActivity {
 	
 	public String GetDeviceLanguage()
 	{
-		String language = Locale.getDefault().getLanguage();
+		Locale locale = Locale.getDefault();
 		 //>=24 is Android 7.0 or high
-        if (Build.VERSION.SDK_INT >=  24) 
-        {
-        	Locale local = getResources().getConfiguration().locale;
-        	language = local.getLanguage();            
-        } 
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+		    locale = getResources().getConfiguration().getLocales().get(0);
+		}
+		String language = locale.getLanguage() + "-" + locale.getCountry();
 		return language;
 	}
 	
-	public String GetDeviceCountry()
-	{
-        String country = Locale.getDefault().getCountry();
-		 //>=24 is Android 7.0 or high
-        if (Build.VERSION.SDK_INT >=  24) 
-        {
-        	Locale local = getResources().getConfiguration().locale;
-        	country = local.getCountry();            
-        } 
-		return country;
-	}
 }

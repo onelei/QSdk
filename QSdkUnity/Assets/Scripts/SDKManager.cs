@@ -81,11 +81,10 @@ public class SDKManager : MonoBehaviour
         AndroidJavaClass ja = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         AndroidJavaObject jo = ja.GetStatic<AndroidJavaObject>("currentActivity");
         string deviceLanguage = jo.Call<string>("GetDeviceLanguage");
-        string deviceCountry = jo.Call<string>("GetDeviceCountry");
 
         Debug.Log("Unity------------- GetDeviceLanguage   End--------------");
         Text_Add.text = Application.systemLanguage.ToString();
-        Text_Send.text = deviceLanguage + " : " + deviceCountry;
+        Text_Send.text = deviceLanguage;
     }
 
     public void SdkMessage(string msg)
