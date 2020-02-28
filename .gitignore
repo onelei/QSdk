@@ -4,3 +4,12 @@
 /unity/simpleSdk/Packages
 /unity/simpleSdk/Temp
 /unity/simpleSdk/simpleSdk.sln
+/QSdkUnity/Library
+/QSdkUnity/obj
+/QSdkUnity/Packages
+/QSdkUnity/UnityPackageManager
+/QSdkUnity/Assembly-CSharp.csproj
+/QSdkUnity/Assembly-CSharp-Editor.csproj
+/QSdkUnity/QSdkUnity.csproj
+/QSdkUnity/QSdkUnity.sln
+/QSdkUnity/Temp
