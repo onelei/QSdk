@@ -1,3 +1,9 @@
+![Logo](./Image/logo.png)
+
+[![license](http://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Tencent/InjectFix/blob/master/LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-blue.svg)](https://github.com/Tencent/InjectFix/pulls)
+[![Build status](https://travis-ci.org/Tencent/InjectFix.svg?branch=master)](https://travis-ci.org/Tencent/InjectFix)
+
 # QSdk
 
 **QSdk**, the simple sdk guide for *unity developers*.
